@@ -17,6 +17,7 @@ References:
 3) https://medium.com/@esmat.anis/robust-extrapolation-of-lines-in-video-using-linear-hough-transform-edd39d642ddf
 4) http://ottonello.gitlab.io/selfdriving/nanodegree/python/line%20detection/2016/12/18/extrapolating_lines.html
 5) http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html
+6) http://www.pyimagesearch.com/2015/04/06/zero-parameter-automatic-canny-edge-detection-with-python-and-opencv/
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by taking the slope of the every line obtanined from the hough_lines() function. Slopes thus obtained can be distinguished based on whether they are positive or negative. Lines belong to the left lane have a positive slope, and the lines belong to the right lane have a negative slope. Hence based on the slope it is easy to differentiate left and right lane lines. Now to extrapolate the line points, I averaged the lane lines and obtained the top and botton line points for each left and right lanes.
 
